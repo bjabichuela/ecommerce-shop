@@ -12,10 +12,9 @@ const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
 
 // DB connection
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect("mongodb+srv://johnabichuela12:4XFkJBfygkQHlf3x@cluster0.t2evp.mongodb.net/ecommerceShop?retryWrites=true&w=majority", 
+    {useNewUrlParser: true, 
+    useUnifiedTopology: true});
 mongoose.connection.once("open", () => console.log("DB Connection Successfull!"));
 
 // Middlewares
